@@ -1,0 +1,10 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo Kompiliere Java Code...
+      - javac Main.java
+      - jar cfe application.jar Main Main.class
+artifacts:
+  files:
+    - application.jar
