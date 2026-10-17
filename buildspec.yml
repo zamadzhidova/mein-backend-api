@@ -1,8 +1,13 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      java: corretto21
   build:
     commands:
+      - echo Prüfe Java-Version...
+      - javac -version
       - echo Kompiliere Java Code...
       - javac Main.java
       - jar cfe application.jar Main Main.class
