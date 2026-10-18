@@ -1,14 +1,11 @@
-version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto25
   build:
     commands:
-      - echo Prüfe Java-Version...
+      - echo Prüfe ob Java vorhanden ist...
+      - java -version
       - javac -version
-      - echo Kompiliere Java Code...
+      - echo Kompiliere den Java-Code...
       - javac Main.java
       - jar cfe application.jar Main Main.class
 
